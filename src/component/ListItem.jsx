@@ -37,7 +37,7 @@ export const Text = styled.div`
   }
 `
 
-function ListItemBlock({ doneFilter }) {
+function ListItemBlock({ ButtonType,doneFilter }) {
 
     const [todoState,setTodoState] = useRecoilState(todoListState);
 
@@ -45,6 +45,11 @@ function ListItemBlock({ doneFilter }) {
         const state = todoState.map((todo) => todo.id === id ? { ...todo, done: !todo.done } : todo)
         setTodoState(state);
     }
+
+    const onDelete = (id) => {
+        const state = todoState.filter((todo) => todo.id !== id);
+        setTodoState(state);
+    };   
 
     const showDone = () =>{
         return todoState.filter(todo=>todo.done);
@@ -60,6 +65,7 @@ function ListItemBlock({ doneFilter }) {
                     {todos.done ? (<MdDone />) : null}
                 </CheckCircle>
                 <Text $done={todos.done}>{todos.text}</Text>
+                {ButtonType &&ButtonType(todos,onDelete)}
             </div>
         ))
     }

@@ -33,7 +33,7 @@ function CreateUpdateBlock() {
     return(<>
         생성/수정
         <div className="Create">
-            <ListItem  filterType="all"/>
+            <ListItem  doneFilter="all"/>
             <form onSubmit={onCreate}>
                 <input
                 autoFocus 
