@@ -46,8 +46,8 @@ function ListItemBlock({ ButtonType,doneFilter }) {
     const onOpenEdit = (id)=>{
         setOpenedit(prevIndex => (prevIndex === id ? null : id))
     }
-    const onCancleEdit = ()=>{
-        setOpenedit(false);
+    const onCancleEdit = (id)=>{
+        setOpenedit(prevIndex=>(prevIndex===id?null:!id));
     }    
     const onEdit = (id) =>{
         if(value ===""){
@@ -102,7 +102,11 @@ function ListItemBlock({ ButtonType,doneFilter }) {
                     {ButtonType=null}
                     </>
                     :
-                    <Text $done={todos.done}>{todos.text}</Text>
+                    <div className="TextBlock">
+                        <Text $done={todos.done}>{todos.text}</Text>
+                    </div>
+
+                    
                 }
                 {ButtonType &&ButtonType(todos,onDelete,onOpenEdit)}
             </div>
@@ -110,6 +114,8 @@ function ListItemBlock({ ButtonType,doneFilter }) {
     }
 
     return(<>
+    <div className="TodoTemplate">
+        <div className="TodoListBlock">
         {
             doneFilter === "all"?
                 todoItem(todoState)
@@ -118,6 +124,10 @@ function ListItemBlock({ ButtonType,doneFilter }) {
             :
                 todoItem(showNotDone())
         }
+        </div>
+         
+    </div>
+       
 
     </>)
 }

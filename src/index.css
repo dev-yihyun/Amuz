@@ -11,8 +11,7 @@ body {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
 .CheckCircle{
@@ -35,24 +34,60 @@ code {
   color: black;
   font-weight: bolder;
 }
-.AppbarBlock a{
-  margin: 10px;
-  font-size: 20px;
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
-}
+
 .Item{
   display: flex;
   flex-direction: row;
   align-items: center;
 }
 
+.AppBar{
+  border-radius: 15px;
+  font-size: 40px;
+  background-color: #92C7CF;
+  padding: 20px;
+  font-weight: bolder;
+  display: flex;
+  justify-content: space-around;
+}
+
 .AppBar a{
   margin: 10px;
   font-size: 30px;
   font-weight: bold;
-  color: black;
+  color: white;
   text-decoration: none;
   cursor: pointer;
+}
+
+.Root{
+  background-color: #E5E1DA;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.TodoTemplate{
+  background-color: #FBF9F1;
+  height: 650px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.TodoListBlock{
+  display: flex;
+  flex-direction: column;
+}
+
+.TextBlock{
+  border-bottom: 2px dashed #AAD7D9;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 400px;
+  margin: 10px;
 }

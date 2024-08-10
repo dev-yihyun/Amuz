@@ -5,7 +5,6 @@ function HomeBlock() {
     const [doneFilter,setDoneFilter] = useState("all");
 
     return(<>
-        홈
         <div className="List">
             <ListItem doneFilter={doneFilter}/>
             <div className="ComplateButton">

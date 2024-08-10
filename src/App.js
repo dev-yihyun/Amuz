@@ -8,6 +8,7 @@ import Delete from "./component/Delete";
 function App() {
   return (
     <>
+    <div className="Root">
       <Router>
         <div>
           <AppBar/>
@@ -18,6 +19,8 @@ function App() {
           </Routes>
         </div>
       </Router>
+    </div>
+      
     </>
   );
 }

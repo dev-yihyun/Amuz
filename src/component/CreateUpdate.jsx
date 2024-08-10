@@ -35,7 +35,6 @@ function CreateUpdateBlock() {
     }
 
     return(<>
-        생성/수정
         <div className="Create">
             <ListItem  doneFilter="all" ButtonType={ButtonType}/>
             <form onSubmit={onCreate}>

@@ -21,7 +21,6 @@ function DeleteBlock() {
     )
 
     return(<>
-    삭제
     <ListItem ButtonType={ButtonType} doneFilter="all"/>
     </>)
 }
