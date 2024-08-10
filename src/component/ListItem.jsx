@@ -53,49 +53,26 @@ function ListItemBlock({ doneFilter }) {
         return todoState.filter(todo=>!todo.done);
     }
 
+    const todoItem = (todoArr) =>{
+        return todoArr.map((todos)=>(
+            <div className="Item" key={todos.id}>
+                <CheckCircle onClick={() => onDone(todos.id)} $done={todos.done}>
+                    {todos.done ? (<MdDone />) : null}
+                </CheckCircle>
+                <Text $done={todos.done}>{todos.text}</Text>
+            </div>
+        ))
+    }
+
     return(<>
         {
             doneFilter === "all"?
-            (
-                todoState.map((todos)=>(
-                    <div className="Item" key={todos.id}>
-                        <CheckCircle onClick={() => onDone(todos.id)} $done={todos.done}>
-                            {todos.done ? (<MdDone />) : null}
-                        </CheckCircle>
-                        <Text $done={todos.done}>{todos.text}</Text>
-                    </div>
-                ))
-            )
+                todoItem(todoState)
             :doneFilter ==="done"?
-            (
-                showDone().map((todos)=>(
-                    <div className="Item" key={todos.id}>
-                         <CheckCircle onClick={() => onDone(todos.id)} $done={todos.done}>
-                            {todos.done ? (<MdDone />) : null}
-                        </CheckCircle>
-                        <Text $done={todos.done}>{todos.text}</Text>
-                    </div>
-                ))
-            )
+                todoItem(showDone())
             :
-            (
-                showNotDone().map((todos)=>(
-                    <div className="Item" key={todos.id}>
-                         <CheckCircle onClick={() => onDone(todos.id)} $done={todos.done}>
-                            {todos.done ? (<MdDone />) : null}
-                        </CheckCircle>
-                        <Text $done={todos.done}>{todos.text}</Text>
-                    </div>
-                ))
-            )
+                todoItem(showNotDone())
         }
-
-
-
-
-
-       
-       
 
     </>)
 }
