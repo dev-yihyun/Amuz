@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled,{css} from "styled-components";
 import { useRecoilState } from "recoil";
 import { todoListState} from './TodoState';
@@ -40,6 +40,29 @@ export const Text = styled.div`
 function ListItemBlock({ ButtonType,doneFilter }) {
 
     const [todoState,setTodoState] = useRecoilState(todoListState);
+    const [openedit,setOpenedit] = useState(false);
+    const [value,setValue] = useState('');
+
+    const onOpenEdit = (id)=>{
+        setOpenedit(prevIndex => (prevIndex === id ? null : id))
+    }
+    const onCancleEdit = ()=>{
+        setOpenedit(false);
+    }    
+    const onEdit = (id) =>{
+        if(value ===""){
+            alert("공백은 입력할 수 없습니다.");
+        }else{
+            setTodoState(
+                todoState.map((item)=>
+              item.id === id?{...item,text:value }:item
+            )
+          )
+          setValue("");
+          setOpenedit(false);
+        }
+    }
+    
 
     const onDone = (id) => {
         const state = todoState.map((todo) => todo.id === id ? { ...todo, done: !todo.done } : todo)
@@ -64,8 +87,24 @@ function ListItemBlock({ ButtonType,doneFilter }) {
                 <CheckCircle onClick={() => onDone(todos.id)} $done={todos.done}>
                     {todos.done ? (<MdDone />) : null}
                 </CheckCircle>
-                <Text $done={todos.done}>{todos.text}</Text>
-                {ButtonType &&ButtonType(todos,onDelete)}
+                {
+                    openedit===todos.id?
+                    <>
+                    <form onSubmit={()=>onEdit(todos.id)}>
+                        <input
+                            autoFocus 
+                            placeholder={todos.text}
+                            value={value}
+                            onChange={(event)=>setValue(event.target.value)}
+                        ></input>
+                    </form>         
+                    <button onClick={onCancleEdit}>취소</button>
+                    {ButtonType=null}
+                    </>
+                    :
+                    <Text $done={todos.done}>{todos.text}</Text>
+                }
+                {ButtonType &&ButtonType(todos,onDelete,onOpenEdit)}
             </div>
         ))
     }

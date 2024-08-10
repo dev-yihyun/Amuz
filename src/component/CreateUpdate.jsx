@@ -5,6 +5,10 @@ import { todoListState } from "./TodoState";
 
 function CreateUpdateBlock() {
 
+    const ButtonType =(todos,onDelete,onOpenEdit)=>(
+        <button onClick={()=>onOpenEdit(todos.id)}>수정</button>
+    )
+
     const todos = useSetRecoilState(todoListState)
     const [value,setValue] = useState('');
     const nextId = useRef(5);
@@ -33,7 +37,7 @@ function CreateUpdateBlock() {
     return(<>
         생성/수정
         <div className="Create">
-            <ListItem  doneFilter="all"/>
+            <ListItem  doneFilter="all" ButtonType={ButtonType}/>
             <form onSubmit={onCreate}>
                 <input
                 autoFocus 
