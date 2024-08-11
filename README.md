@@ -54,7 +54,6 @@ src/
 <table>
   <tr>
     <td>일정 완료 및 필터링</td>
-    <td>일정 완료 필터링</td>
   </tr>
   <tr>
     <td>
@@ -62,15 +61,9 @@ src/
         <img src="https://github.com/user-attachments/assets/eac661db-0038-4662-8e81-38d9b14125e0">
       </p>
     </td>
-    <td>
-      <p align="center">
-        <img src="">
-      </p>
-    </td>
   </tr>
   <tr>
     <td>일정 추가</td>
-    <td>일정 수정</td>
   </tr>
   <tr>
   <td>
@@ -78,15 +71,9 @@ src/
       <img src="https://github.com/user-attachments/assets/c6dd108a-2608-4687-a1f8-c717378d44c1">
     </p>
   </td>
-  <td>
-    <p align="center">
-      <img src="">
-    </p>
-  </td>
   </tr>
   <tr>
     <td>일정 수정 및 공백 입력</td>
-    <td>공백 입력</td>
   </tr>
   <tr>
   <td>
@@ -94,9 +81,14 @@ src/
       <img src="https://github.com/user-attachments/assets/3f81a9eb-f6dd-42d1-a1a9-e2214ebefefa">
     </p>
   </td>
+  </tr>
+  <tr>
+    <td>일정 삭제</td>
+  </tr>
+  <tr>
   <td>
     <p align="center">
-      <img src="">
+      <img src="https://github.com/user-attachments/assets/7f77867f-6bcb-4d4e-a21a-e7ef7751509d">
     </p>
   </td>
   </tr>
