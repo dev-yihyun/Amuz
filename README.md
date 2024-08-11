@@ -1,70 +1,62 @@
-# Getting Started with Create React App
+# 🧾ToDo List(ver.Recoil)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p align="center">
+  <img src="">
+</p>
 
-## Available Scripts
+**[파일 구조]**
+src/
+├── components/
+│   ├── AppBar.jsx
+│   ├── CreateEdit.jsx
+│   ├── Delete.jsx
+│   ├── Home.jsx
+│   ├── ListItem.jsx
+│   ├── TodoItem.jsx
+│   └── TodoState.jsx
+├── App.js
+├── index.js
+└── ...
 
-In the project directory, you can run:
 
-### `npm start`
+## [프로젝트 소개]
+- <u>2차 면접 과제</u>
+- Recoil을 사용하여 전역 상태관리 하는 일정관리 웹 애플리케이션 입니다.
+- Recoil에 익숙해 지는 것을 목표로 진행하였습니다.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+#### [주요기능]
+- **일정 추가**
+- **일정 삭제**
+- **일정 수정**
+- **일정 완료**
+- **일정 완료/미완료 필터링**
+- **전역 상태 관리**
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+#### [기술 스택]
+1. React
+2. Recoil
+3. createContext
 
-### `npm test`
+#### [시연 영상]
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+#### [구현]
+- **TodoState** : Recoil의 atom을 사용하여 전역 상태 관리를 하였습니다.
+- **AppBar.jsx** : 상단 메뉴로 3페이지에 공통적으로 사용하게 하였습니다.
+- **Home.jsx** : 투두리스트를 보여주는 페이지
+  - Recoil의 selector를 사용하여 완료, 미완료 필터링이 가능한 기능을 구현하였습니다.
+  - 항목이 완료되었는지 여부에 따라 다른 스타일을 적용하였습니다.
+- **CreateEdit.jsx** : 항목을 생성하고 수정 할 수 있는 페이지
+  - 항목마다 input을 통해 수정 가능하게 하였습니다.
+  - 수정과 항목을 입력할 때 공백입력이 불가능 하도록 하였습니다.
+- **Delete.jsx** : 항목을 삭제 가능하도록 구현하였습니다.
+- **ListItem.jsx** : 투두리스트를 출력 할 수 있게 하였습니다.
+- **TodoItem.jsx** : 각 항목을 보여주는 컴포넌트 입니다.
+  - TODO 항목에는 ID,텍스트,완료 여부로 구성되어있습니다.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+#### [후기]
+- 이전에 만들었던 리액트 투두리스트 : https://github.com/dev-yihyun/React_ToDoList
+- Recoil을 사용하여 전역 상태관리하는 방법을 알게 되었습니다.
+- 이전의 프로젝트와 다르게 useReducer,createContext를 사용하는 것 보다 Recoil을 사용하는 것이 더 쉽게 관리 할 수 있었습니다.
