@@ -53,13 +53,13 @@ src/
 
 <table>
   <tr>
-    <td>일정 완료</td>
+    <td>일정 완료 및 필터링</td>
     <td>일정 완료 필터링</td>
   </tr>
   <tr>
     <td>
       <p align="center">
-        <img src="">
+        <img src="https://github.com/user-attachments/assets/eac661db-0038-4662-8e81-38d9b14125e0">
       </p>
     </td>
     <td>
