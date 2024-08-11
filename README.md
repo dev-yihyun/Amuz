@@ -1,7 +1,7 @@
 # 🧾ToDo List(ver.Recoil)
 
 <p align="center">
-  <img src="">
+  <img src="https://github.com/user-attachments/assets/3b0f1231-dea8-4de9-868d-84bc5eaf6370">
 </p>
 
 **[파일 구조]**
