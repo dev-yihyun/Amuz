@@ -85,13 +85,13 @@ src/
   </td>
   </tr>
   <tr>
-    <td>일정 수정</td>
+    <td>일정 수정 및 공백 입력</td>
     <td>공백 입력</td>
   </tr>
   <tr>
   <td>
     <p align="center">
-      <img src="">
+      <img src="https://github.com/user-attachments/assets/3f81a9eb-f6dd-42d1-a1a9-e2214ebefefa">
     </p>
   </td>
   <td>
