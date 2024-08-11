@@ -1,19 +1,19 @@
 import React from "react";
-import TodoList from "./TodoList";
+import ListItem from "./ListItem";
 import { useRecoilState } from "recoil";
 import { todoListFilterState } from "./TodoState";
 
-function HomeBlock(){
+function HomeBlock() {
     const [filter,setFilter] = useRecoilState(todoListFilterState);
-
     return(<>
-        Home
-        <TodoList itemType="Home"/>
+        <ListItem itemType="Home"/>
+
         <div className="ComplateButton">
             <button  onClick={() => setFilter('Show All')}>전체</button>
             <button onClick={() => setFilter('Show Completed')}>완료</button>
             <button onClick={() => setFilter('Show Uncompleted')}>미완료</button>
         </div>
+
     </>)
 }
 

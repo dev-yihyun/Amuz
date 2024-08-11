@@ -1,5 +1,5 @@
 *{
-  margin: 0;
+  margin:0;
 }
 body {
   margin: 0;
@@ -11,9 +11,59 @@ body {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+.Root{
+  background-color: #E5E1DA;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.TodoTemplate{
+  background-color: #FBF9F1;
+  height: 650px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
+.Appbar{
+  border-radius: 15px;
+  font-size: 40px;
+  background-color: #92C7CF;
+  padding: 20px;
+  font-weight: bolder;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.Appbar a{
+  margin: 10px;
+  color: white;
+  text-decoration: none;
+}
+
+.TodoListBlock{
+  height: 550px;
+  padding: 10px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.TodoList{
+  height: 430px;
+  display: flex;
+  flex-direction: column;
+}
+.Item{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
 .CheckCircle{
   width: 32px;
   height: 32px;
@@ -29,66 +79,62 @@ code {
   background-color:white;
 }
 
-.Text{
-  font-size: 21px;
-  color: black;
-  font-weight: bolder;
-}
-
-.Item{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-
-.AppBar{
-  border-radius: 15px;
-  font-size: 40px;
-  background-color: #92C7CF;
-  padding: 20px;
-  font-weight: bolder;
-  display: flex;
-  justify-content: space-around;
-}
-
-.AppBar a{
-  margin: 10px;
-  font-size: 30px;
-  font-weight: bold;
-  color: white;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.Root{
-  background-color: #E5E1DA;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.TodoTemplate{
-  background-color: #FBF9F1;
-  height: 650px;
-  border-radius: 15px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.TodoListBlock{
-  display: flex;
-  flex-direction: column;
-}
-
 .TextBlock{
   border-bottom: 2px dashed #AAD7D9;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  width: 400px;
+  width: 300px;
   margin: 10px;
+}
+
+.Text{
+  font-size: 21px;
+  color: black;
+  font-weight: bolder;
+}
+.Remove{
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  cursor: pointer;
+  color: #95badf;
+}
+.Item input[type=text] {
+  border: none;
+  background-color: #e9e5d8;/* #FBF9F1 */
+  height:32px;
+  font-size: 21px;
+  width: 100%;
+  font-weight: bolder;
+  padding: 5px;
+}
+
+
+.ComplateButton button,.Create button{
+  border: none;
+  border-radius: 10px;
+  width: 70px;
+  height: 50px;
+  margin: 10px;
+  font-weight: bolder;
+  font-size: 18px;
+  color: white;
+  background-color: #95badf;
+}
+
+.Create input{
+  background-color: #f0eeeb;
+  width: 300px;
+  height: 50px;
+  padding: 20px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  font-size: 20px;
+  box-sizing: border-box;
+  margin-left:20px;
 }

@@ -1,10 +1,9 @@
 import React from "react";
-import TodoList from "./TodoList";
+import ListItem from "./ListItem";
 
 function DeleteBlock() {
     return(<>
-        DeleteBlock
-        <TodoList itemType="Delete"/>
+        <ListItem itemType="Delete"/>
     </>)
 }
 

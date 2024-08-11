@@ -1,7 +1,12 @@
 import React, { useState } from "react";
+import ListItem from "./ListItem";
 import { useSetRecoilState } from "recoil";
-import {todoListState} from './TodoState';
-import TodoList from "./TodoList";
+import { todoListState } from "./TodoState";
+
+let id = 3;
+function getId() {
+    return id++;
+}
 
 function CreateEditBlock() {
     const [inputValue, setInputValue] = useState('');
@@ -28,18 +33,18 @@ function CreateEditBlock() {
     const onChange = ({target: {value}}) => {
       setInputValue(value);
     };
-  
-    return (
-      <div>
-        <TodoList itemType="CreateEdit"/>
+
+    return(<>
         
-        <input type="text" value={inputValue} onChange={onChange} />
-        <button onClick={addItem}>Add</button>
-      </div>
-    );
+        <ListItem itemType="CreateEdit"/>
+        <div className='Create'>
+            <input type="text" placeholder='할 일을 입력 후, Add 를 누르세요' 
+            value={inputValue} 
+            onChange={onChange} 
+            />
+            <button onClick={addItem}>Add</button>
+        </div>
+    </>)
 }
-let id = 3;
-function getId() {
-    return id++;
-}
+
 export default CreateEditBlock;
