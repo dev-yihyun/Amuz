@@ -1,26 +1,30 @@
-import React from "react";
-import { BrowserRouter as Router,Route, Routes } from "react-router-dom";
-import AppBar from "./component/AppBar";
-import Home from "./component/Home";
-import CreateUpdate from "./component/CreateUpdate";
-import Delete from "./component/Delete";
+import './App.css';
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
+import AppBarBlock from "./component/AppBar";
+import HomeBlock from './component/Home';
+import CreateEditBlock from './component/CreateEdit';
+import DeleteBlock from './component/Delete';
+import { RecoilRoot } from 'recoil';
 
 function App() {
   return (
     <>
-    <div className="Root">
-      <Router>
-        <div>
-          <AppBar/>
-          <Routes>
-            <Route path="/" element={<Home/>}/>
-            <Route path="/CreateUpdate" element={<CreateUpdate/>}/>
-            <Route path="/Delete" element={<Delete/>}/>
-          </Routes>
-        </div>
-      </Router>
-    </div>
+    <RecoilRoot>
       
+      <div /*  className="Root" */>
+    
+        <Router>
+          <div>
+            <AppBarBlock/>
+            <Routes>
+              <Route path="/" element={<HomeBlock/>}/>
+              <Route path="/CreateEdit" element={<CreateEditBlock/>}/>
+              <Route path="/Delete" element={<DeleteBlock/>}/>
+            </Routes>
+          </div>
+        </Router>
+      </div>
+      </RecoilRoot>
     </>
   );
 }

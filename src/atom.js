@@ -15,15 +15,16 @@ export const todoListState = atom({
         },
     ],
 });
-
+// 필터 상태 (모든 항목, 완료된 항목, 미완료 항목)
 export const todoListFilterState = atom({
     key: 'todoListFilterState',
     default: 'Show All',
-});
-
-export const filteredTodoListState = selector({
+  });
+  
+  // 필터링된 Todo 리스트 선택자
+  export const filteredTodoListState = selector({
     key: 'filteredTodoListState',
-    get: ({get}) => {
+    get: ({ get }) => {
       const filter = get(todoListFilterState);
       const list = get(todoListState);
   
@@ -36,4 +37,18 @@ export const filteredTodoListState = selector({
           return list;
       }
     },
-});
+  });
+/* 
+const todoListStatsState = selector({
+    key: 'todoListStatsState',
+    get: ({get}) => {
+      const todoList = get(todoListState);
+      const todoCompleted = todoList.filter((item) => item.isComplete);
+      const todoUncompleted = todoList.filter((item) => !item.isComplete);
+  
+      return {
+        todoCompleted,
+        todoUncompleted,
+      };
+    },
+}); */

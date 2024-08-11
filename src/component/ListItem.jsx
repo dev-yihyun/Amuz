@@ -37,6 +37,8 @@ export const Text = styled.div`
   }
 `
 
+
+
 function ListItemBlock({ ButtonType,doneFilter }) {
 
     const [todoState,setTodoState] = useRecoilState(todoListState);

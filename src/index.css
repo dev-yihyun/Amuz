@@ -64,6 +64,7 @@ code {
   background-color: #E5E1DA;
   height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
