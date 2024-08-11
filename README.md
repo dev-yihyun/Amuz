@@ -51,6 +51,56 @@ src/
 
 #### [시연 영상]
 
+<table>
+  <tr>
+    <td>일정 완료</td>
+    <td>일정 완료 필터링</td>
+  </tr>
+  <tr>
+    <td>
+      <p align="center">
+        <img src="">
+      </p>
+    </td>
+    <td>
+      <p align="center">
+        <img src="">
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td>일정 추가</td>
+    <td>일정 수정</td>
+  </tr>
+  <tr>
+  <td>
+    <p align="center">
+      <img src="https://github.com/user-attachments/assets/c6dd108a-2608-4687-a1f8-c717378d44c1">
+    </p>
+  </td>
+  <td>
+    <p align="center">
+      <img src="">
+    </p>
+  </td>
+  </tr>
+  <tr>
+    <td>일정 수정</td>
+    <td>공백 입력</td>
+  </tr>
+  <tr>
+  <td>
+    <p align="center">
+      <img src="">
+    </p>
+  </td>
+  <td>
+    <p align="center">
+      <img src="">
+    </p>
+  </td>
+  </tr>
+</table>
 
 
 #### [구현]
