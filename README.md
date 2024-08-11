@@ -5,17 +5,29 @@
 </p>
 
 **[파일 구조]**
+
 src/
+
 ├── components/
+
 │   ├── AppBar.jsx
+
 │   ├── CreateEdit.jsx
+
 │   ├── Delete.jsx
+
 │   ├── Home.jsx
+
 │   ├── ListItem.jsx
+
 │   ├── TodoItem.jsx
+
 │   └── TodoState.jsx
+
 ├── App.js
+
 ├── index.js
+
 └── ...
 
 
