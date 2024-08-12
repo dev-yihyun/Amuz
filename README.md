@@ -47,7 +47,6 @@ src/
 #### [기술 스택]
 1. React
 2. Recoil
-3. createContext
 
 #### [시연 영상]
 
